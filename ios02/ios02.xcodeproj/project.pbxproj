@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196810DE1CF7D54D001F1804 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196810DD1CF7D54D001F1804 /* TodoModel.swift */; };
 		197E67BB1CF7CB6300F5475C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E67BA1CF7CB6300F5475C /* AppDelegate.swift */; };
 		197E67BD1CF7CB6300F5475C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E67BC1CF7CB6300F5475C /* ViewController.swift */; };
 		197E67C01CF7CB6300F5475C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197E67BE1CF7CB6300F5475C /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		196810DD1CF7D54D001F1804 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		197E67B71CF7CB6300F5475C /* ios02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		197E67BA1CF7CB6300F5475C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		197E67BC1CF7CB6300F5475C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				197E67C11CF7CB6300F5475C /* Assets.xcassets */,
 				197E67C31CF7CB6300F5475C /* LaunchScreen.storyboard */,
 				197E67C61CF7CB6300F5475C /* Info.plist */,
+				196810DD1CF7D54D001F1804 /* TodoModel.swift */,
 			);
 			path = ios02;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196810DE1CF7D54D001F1804 /* TodoModel.swift in Sources */,
 				197E67BD1CF7CB6300F5475C /* ViewController.swift in Sources */,
 				197E67BB1CF7CB6300F5475C /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +290,7 @@
 				197E67CB1CF7CB6300F5475C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
