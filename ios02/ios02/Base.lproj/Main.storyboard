@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4J6-np-9de">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,28 +17,45 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="J1P-gL-ExM">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="5b1-wV-fGF"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="80" id="ue4-dY-pIb">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="80" id="ue4-dY-pIb">
+                                        <rect key="frame" x="0.0" y="136" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue4-dY-pIb" id="xAn-bd-o72">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QjE-yf-gxK">
-                                                    <rect key="frame" x="21" y="15" width="54" height="50"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="103" contentMode="center" image="child-selected" id="2TS-Dd-Qtn">
+                                                    <rect key="frame" x="16" y="8" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-06-01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8hp-eT-g2v">
+                                                    <rect key="frame" x="80" y="40" width="217" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" backgroundImage="child-selected"/>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8hp-eT-g2v">
-                                                    <rect key="frame" x="83" y="50" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="去游乐场" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9iD-77-oaf">
+                                                    <rect key="frame" x="80" y="4" width="217" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="S1Q-Un-Aqd" kind="push" identifier="edit" id="ho7-qP-J3c"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -48,16 +65,153 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zCG-tg-Bv8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="F7H-o6-ehL">
+                            <connections>
+                                <segue destination="S1Q-Un-Aqd" kind="push" identifier="add" id="r5P-jT-iHT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="searchDisplayController" destination="pSH-RY-Z2D" id="lpN-RB-DWY"/>
                         <outlet property="tableView" destination="sYY-9n-dQh" id="w1S-4w-OCu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pSH-RY-Z2D">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="18l-WV-zDD"/>
+                        <outlet property="searchBar" destination="J1P-gL-ExM" id="kcW-nz-D8v"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="hdD-mf-6aw"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="xjP-tg-NBs"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="51R-e0-WYH"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="796" y="351"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="LCf-9K-Pbm">
+            <objects>
+                <viewController id="S1Q-Un-Aqd" customClass="DetailViewController" customModule="ios02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdG-Uc-hmd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2R9-Sj-SSC">
+                                <rect key="frame" x="85" y="84" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="phone"/>
+                                <state key="selected" backgroundImage="phone-selected"/>
+                                <connections>
+                                    <action selector="phoneTapped:" destination="S1Q-Un-Aqd" eventType="touchUpInside" id="2Sz-kd-Z0K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7ap-cO-8p8">
+                                <rect key="frame" x="152" y="84" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="shopping-cart"/>
+                                <state key="selected" backgroundImage="shopping-cart-selected"/>
+                                <connections>
+                                    <action selector="shoppingTapped:" destination="S1Q-Un-Aqd" eventType="touchUpInside" id="qSu-fV-wpR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pGp-z4-edD">
+                                <rect key="frame" x="217" y="84" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="travel"/>
+                                <state key="selected" backgroundImage="travel-selected"/>
+                                <connections>
+                                    <action selector="shoppingTapped:" destination="S1Q-Un-Aqd" eventType="touchUpInside" id="9eZ-CB-fEK"/>
+                                    <action selector="travelTapped:" destination="S1Q-Un-Aqd" eventType="touchUpInside" id="RS2-kP-8qz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo事项" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9hk-Ec-AjA">
+                                <rect key="frame" x="15" y="179" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="lMc-ed-Gdy">
+                                <rect key="frame" x="0.0" y="208" width="320" height="181"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="486276486.33250397">
+                                    <!--2016-05-30 04:48:06 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qik-AH-xL4">
+                                <rect key="frame" x="143" y="436" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="okTapped:" destination="S1Q-Un-Aqd" eventType="touchUpInside" id="7MS-hy-YBf"/>
+                                    <segue destination="VH8-3n-o1f" kind="unwind" unwindAction="close:" id="Fi8-15-gsX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ioo-HL-eie">
+                                <rect key="frame" x="110" y="176" width="190" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="61l-Aj-ITk">
+                                <rect key="frame" x="15" y="84" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="child"/>
+                                <state key="selected" backgroundImage="child-selected"/>
+                                <connections>
+                                    <action selector="childTapped:" destination="S1Q-Un-Aqd" eventType="touchUpInside" id="GMP-d7-mpb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DNT-Dz-zMV"/>
+                    <connections>
+                        <outlet property="childButton" destination="61l-Aj-ITk" id="pY8-1K-OCR"/>
+                        <outlet property="phoneButton" destination="2R9-Sj-SSC" id="rjZ-dz-qVp"/>
+                        <outlet property="shoppingButton" destination="7ap-cO-8p8" id="9vV-si-t6F"/>
+                        <outlet property="todoDate" destination="lMc-ed-Gdy" id="jSN-zp-Jhl"/>
+                        <outlet property="todoItem" destination="ioo-HL-eie" id="REm-w9-WER"/>
+                        <outlet property="travelButton" destination="pGp-z4-edD" id="1kw-Wu-kvD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvh-qR-erT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VH8-3n-o1f" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eqQ-pU-1nO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4J6-np-9de" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqw-Hr-Qhd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8db-KY-R5r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDb-d6-R8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="264" y="351"/>
         </scene>
     </scenes>
     <resources>
+        <image name="child" width="50" height="50"/>
         <image name="child-selected" width="50" height="50"/>
+        <image name="phone" width="50" height="50"/>
+        <image name="phone-selected" width="50" height="50"/>
+        <image name="shopping-cart" width="50" height="50"/>
+        <image name="shopping-cart-selected" width="50" height="50"/>
+        <image name="travel" width="50" height="50"/>
+        <image name="travel-selected" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="r5P-jT-iHT"/>
+    </inferredMetricsTieBreakers>
 </document>
