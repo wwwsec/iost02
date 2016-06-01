@@ -23,8 +23,8 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
             TodoModel(id:"3",image:"shopping-cart",title:"cc",date:dateFromString("2016-01-01")!),
             TodoModel(id:"4",image:"travel",title:"dd",date:dateFromString("2016-01-01")!)
             ]
-        navigationItem.leftBarButtonItem = editButtonItem()
-        var offset = tableView.contentOffset
+        navigationItem.leftBarButtonItem = editButtonItem()//编辑按钮
+        var offset = tableView.contentOffset//隐藏搜索框
         offset.y += (searchDisplayController?.searchBar.frame.size.height)!
         tableView.contentOffset = offset
         
@@ -35,6 +35,7 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    //格式化日期
     func dateFromString (dateStr: String) -> NSDate? {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
